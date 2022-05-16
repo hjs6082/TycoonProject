@@ -10,12 +10,12 @@ public class DictionaryData : ScriptableObject
     public int Number { get { return number; } }
 
     [SerializeField]
-    private string name;
-    public string Name { get { return name; } }
+    private string myname;
+    public string MyName { get { return myname; } }
 
     [SerializeField]
     private string explane;
-    public string Explane { get { return explane; } }
+    public string Explane { get { return explane; } } 
 
 
 }
