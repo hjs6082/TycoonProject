@@ -16,6 +16,7 @@ public class PanelScript : MonoBehaviour, IPointerClickHandler
         Setting,
         End
     }
+
     public panelType PanelType;
     private bool isPanel = false;
     private bool isLoad = false;
