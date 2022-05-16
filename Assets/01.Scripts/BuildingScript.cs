@@ -29,12 +29,16 @@ public class BuildingScript : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        myMoney += nowMoney;
-        nowMoney = 0;
-        nowMoneyText.text = nowMoney.ToString();
-        if(myMoney == 500)
+        if (nowMoney != 0)
         {
-            StartCoroutine(PlusMoney(1));
+            nowMoneyText.text = "+" + nowMoney.ToString();
+            UIManager.instance.PlusMoney();
+            myMoney += nowMoney;
+            nowMoney = 0;
+            if (myMoney == 500)
+            {
+                StartCoroutine(PlusMoney(1));
+            }
         }
     }
 
