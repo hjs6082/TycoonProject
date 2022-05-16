@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dogam : MonoBehaviour
+public class MyData : MonoBehaviour
 {
-    public static Dogam instance;
-    public Dictionary<int, bool> dogamDictionary = new Dictionary<int, bool>();
+    public DictionaryData myData;
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        Dogam.instance.dogamDictionary.Add(myData.Number, false);
     }
 
     // Update is called once per frame
