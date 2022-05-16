@@ -31,6 +31,7 @@ public class BuildingScript : MonoBehaviour, IPointerClickHandler
     {
         if (nowMoney != 0)
         {
+            AudioManager.instnace.PlusMoneySound();
             nowMoneyText.text = "+" + nowMoney.ToString();
             UIManager.instance.PlusMoney();
             myMoney += nowMoney;
