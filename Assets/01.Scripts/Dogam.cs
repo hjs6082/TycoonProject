@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Dogam : MonoBehaviour
 {
     [SerializeField]
+    private GameObject dogamObj;
+    [SerializeField]
     private Text dogamCountText;
     [SerializeField]
     private GameObject[] dogamPanels;
@@ -17,22 +19,11 @@ public class Dogam : MonoBehaviour
     void Start()
     {
         instance = this;
-        for (int i = 0; i < dogamPanels.Length; i++)
-        {
-            dogamPanels[i].transform.GetChild(0).GetComponent<Text>().text = "#" + dogamPanels[i].GetComponent<MyData>().myData.Number.ToString();
-            dogamPanels[i].transform.GetChild(2).GetComponent<Text>().text = dogamPanels[i].GetComponent<MyData>().myData.MyName;
-            dogamPanels[i].transform.GetChild(3).GetComponent<Text>().text = dogamPanels[i].GetComponent<MyData>().myData.Explane;
-            dogamDictionary.Add(dogamPanels[i].GetComponent<MyData>().myData.Number, false);
-        }
+
+        DogamStart();
+
         DogamChange(1);
-
         DogamChange(2);
-
-        foreach (var item in dogamDictionary)
-        {
-            Debug.Log(item.Value);
-        }
-
     }
 
     // Update is called once per frame
@@ -51,7 +42,7 @@ public class Dogam : MonoBehaviour
             {
                 if(item.Value == true)
                 {
-                    dogamPanels[item.Key - 1].GetComponent<Image>().color = Color.blue;
+                    dogamPanels[item.Key - 1].GetComponent<Image>().color = Color.green;
                 }
             }
         }
@@ -63,7 +54,25 @@ public class Dogam : MonoBehaviour
                 dogamCount++;
             }
         }
-        dogamCountText.text = "8개 중 " + dogamCount + " 개의 캐릭터 발견";
+        dogamCountText.text = dogamDictionary.Count + "개 중 " + dogamCount + " 개의 캐릭터 발견";
+    }
+
+    public void DogamStart()
+    {
+        int dogamCount = dogamObj.transform.childCount;
+        dogamPanels = new GameObject[dogamCount];
+        for (int i = 0; i < dogamCount; i++)
+        {
+            dogamPanels[i] = dogamObj.transform.GetChild(i).gameObject;
+        }
+        for (int i = 0; i < dogamPanels.Length; i++)
+        {
+            dogamPanels[i].transform.GetChild(0).GetComponent<Text>().text = "#" + dogamPanels[i].GetComponent<MyData>().myData.Number.ToString();
+            //dogamPanels[i].transform.GetChild(1).GetComponent<Image>().sprite = dogamPanels[i].GetComponent<MyData>().myData.CharacterImg; <<아트가 없기때문에 아직 못넣었어요.
+            dogamPanels[i].transform.GetChild(2).GetComponent<Text>().text = dogamPanels[i].GetComponent<MyData>().myData.MyName;
+            dogamPanels[i].transform.GetChild(3).GetComponent<Text>().text = dogamPanels[i].GetComponent<MyData>().myData.Explane;
+            dogamDictionary.Add(dogamPanels[i].GetComponent<MyData>().myData.Number, false);
+        }
     }
 
 }
