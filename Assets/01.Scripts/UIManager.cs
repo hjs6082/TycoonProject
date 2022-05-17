@@ -7,6 +7,7 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
+    public int myMoney;
     public GameObject plusMoneyPanel;
     private bool isClick = false;
     // Start is called before the first frame update
