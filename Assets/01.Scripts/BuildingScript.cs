@@ -35,11 +35,11 @@ public class BuildingScript : MonoBehaviour, IPointerClickHandler
             nowMoneyText.text = "+" + nowMoney.ToString();
             UIManager.instance.PlusMoney();
             myMoney += nowMoney;
-            nowMoney = 0;
-            if (myMoney == 500)
+            if (nowMoney == 500)
             {
                 StartCoroutine(PlusMoney(1));
             }
+            nowMoney = 0;
         }
     }
 

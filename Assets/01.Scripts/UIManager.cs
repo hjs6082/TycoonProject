@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public GameObject plusMoneyPanel;
+    private bool isClick = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,33 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
+                Input.mousePosition.y, -Camera.main.transform.position.z));
+        if (!isClick)
+        {
+            plusMoneyPanel.transform.position = point;
+        }
     }
 
     public void PlusMoney()
     {
+        isClick = true;
         plusMoneyPanel.SetActive(true);
-        plusMoneyPanel.transform.DOLocalMoveY(334f, 0.5f).
-            OnComplete(() => { plusMoneyPanel.SetActive(false); });
-        plusMoneyPanel.transform.localPosition = new Vector2(0, 188f);
+        if (plusMoneyPanel.transform.localPosition.y <= 0)
+        {
+            plusMoneyPanel.transform.DOLocalMoveY(320f, 0.5f).
+                OnComplete(() => { PanelSetting(); });
+        }
+        else if(plusMoneyPanel.transform.localPosition.y > 0)
+        {
+            plusMoneyPanel.transform.DOLocalMoveY(320f, 0.5f). 
+               OnComplete(() => { PanelSetting(); });
+        }
+    }
+
+    public void PanelSetting()
+    {
+        isClick = false;
+        plusMoneyPanel.SetActive(false);
     }
 }
