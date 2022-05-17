@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 480166686}
   - component: {fileID: 480166685}
   - component: {fileID: 480166684}
+  - component: {fileID: 480166687}
   m_Layer: 5
   m_Name: DogamPanel
   m_TagString: Untagged
@@ -895,6 +896,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480166682}
   m_CullTransparentMesh: 1
+--- !u!114 &480166687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480166682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2916544f46a7b54cb646fa1afa4445f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogamPanels:
+  - {fileID: 1036083341}
+  - {fileID: 2100087367}
+  - {fileID: 1231342582}
+  - {fileID: 1556421807}
+  - {fileID: 1587996547}
+  - {fileID: 2016146152}
+  - {fileID: 639598621}
+  - {fileID: 2020077851}
 --- !u!1 &618340665
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +1003,7 @@ GameObject:
   - component: {fileID: 639598622}
   - component: {fileID: 639598624}
   - component: {fileID: 639598623}
+  - component: {fileID: 639598625}
   m_Layer: 5
   m_Name: DogamPanel7
   m_TagString: Untagged
@@ -1049,6 +1072,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639598621}
   m_CullTransparentMesh: 1
+--- !u!114 &639598625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639598621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: d589d2d0b7ba3b2408cce9be9c6a2928, type: 2}
 --- !u!1 &777337570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1598,7 @@ GameObject:
   - component: {fileID: 1036083342}
   - component: {fileID: 1036083344}
   - component: {fileID: 1036083343}
+  - component: {fileID: 1036083345}
   m_Layer: 5
   m_Name: DogamPanel1
   m_TagString: Untagged
@@ -1630,6 +1667,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036083341}
   m_CullTransparentMesh: 1
+--- !u!114 &1036083345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036083341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: 2355336201c2a0c43ab684596e68c81b, type: 2}
 --- !u!1 &1142751189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2125,7 @@ GameObject:
   - component: {fileID: 1231342583}
   - component: {fileID: 1231342585}
   - component: {fileID: 1231342584}
+  - component: {fileID: 1231342586}
   m_Layer: 5
   m_Name: DogamPanel3
   m_TagString: Untagged
@@ -2143,6 +2194,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231342582}
   m_CullTransparentMesh: 1
+--- !u!114 &1231342586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231342582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: 1148adffe8dd54848945c3acbe67db67, type: 2}
 --- !u!1 &1279618276
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,6 +3096,7 @@ GameObject:
   - component: {fileID: 1556421808}
   - component: {fileID: 1556421810}
   - component: {fileID: 1556421809}
+  - component: {fileID: 1556421811}
   m_Layer: 5
   m_Name: DogamPanel4
   m_TagString: Untagged
@@ -3100,6 +3165,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556421807}
   m_CullTransparentMesh: 1
+--- !u!114 &1556421811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556421807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: 60a2a73abb1ab3740b8bd1c3e1cd1d29, type: 2}
 --- !u!1 &1587996547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3189,7 @@ GameObject:
   - component: {fileID: 1587996548}
   - component: {fileID: 1587996550}
   - component: {fileID: 1587996549}
+  - component: {fileID: 1587996551}
   m_Layer: 5
   m_Name: DogamPanel5
   m_TagString: Untagged
@@ -3179,6 +3258,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587996547}
   m_CullTransparentMesh: 1
+--- !u!114 &1587996551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587996547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: c5f32aa615d8abb4297f0b5fbeea151e, type: 2}
 --- !u!1 &1665490313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,6 +3951,7 @@ GameObject:
   - component: {fileID: 2016146153}
   - component: {fileID: 2016146155}
   - component: {fileID: 2016146154}
+  - component: {fileID: 2016146156}
   m_Layer: 5
   m_Name: DogamPanel6
   m_TagString: Untagged
@@ -3927,6 +4020,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016146152}
   m_CullTransparentMesh: 1
+--- !u!114 &2016146156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016146152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: 2e08b6c023dd44643818514b87c8257f, type: 2}
 --- !u!1 &2020077851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3938,6 +4044,7 @@ GameObject:
   - component: {fileID: 2020077852}
   - component: {fileID: 2020077854}
   - component: {fileID: 2020077853}
+  - component: {fileID: 2020077855}
   m_Layer: 5
   m_Name: DogamPanel8
   m_TagString: Untagged
@@ -4006,6 +4113,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020077851}
   m_CullTransparentMesh: 1
+--- !u!114 &2020077855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020077851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: 6a404ad18c5d8914d87475f54d90bfce, type: 2}
 --- !u!1 &2049429674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4167,6 +4287,7 @@ GameObject:
   - component: {fileID: 2100087368}
   - component: {fileID: 2100087370}
   - component: {fileID: 2100087369}
+  - component: {fileID: 2100087371}
   m_Layer: 5
   m_Name: DogamPanel2
   m_TagString: Untagged
@@ -4235,3 +4356,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100087367}
   m_CullTransparentMesh: 1
+--- !u!114 &2100087371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100087367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33e9239080a9a843bfba203fc98539e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 11400000, guid: 529dc9fa7208d1940a27d52334520549, type: 2}
