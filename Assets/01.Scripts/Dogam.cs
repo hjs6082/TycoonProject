@@ -42,7 +42,7 @@ public class Dogam : MonoBehaviour
             {
                 if(item.Value == true)
                 {
-                    dogamPanels[item.Key - 1].GetComponent<Image>().color = Color.green;
+                    dogamPanels[item.Key - 1].GetComponent<Image>().color = Color.blue;
                 }
             }
         }
