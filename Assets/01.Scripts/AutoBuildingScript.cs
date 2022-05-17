@@ -11,6 +11,10 @@ public class AutoBuildingScript : MonoBehaviour
 
     public int nowMoney;
 
+    public float houseCooltime = 3f;
+    public float buildingCooltime = 5f;
+    public float hotelCooltime = 3f;
+
     public Text myMoneyText;
     public Text nowMoneyText;
     private bool isRestart;
@@ -41,7 +45,7 @@ public class AutoBuildingScript : MonoBehaviour
                         GetMoney();
                         UIManager.instance.myMoney += nowMoney;
                         nowMoney = 0;
-                        StartCoroutine(PlusMoney(1));
+                        StartCoroutine(PlusMoney(houseCooltime));
                         isRestart = true;
                     }
                 }
@@ -55,7 +59,7 @@ public class AutoBuildingScript : MonoBehaviour
                         GetMoney();
                         UIManager.instance.myMoney += nowMoney;
                         nowMoney = 0;
-                        StartCoroutine(PlusMoney(1));
+                        StartCoroutine(PlusMoney(buildingCooltime));
                         isRestart = true;
                     }
                 }
@@ -69,7 +73,7 @@ public class AutoBuildingScript : MonoBehaviour
                         GetMoney();
                         UIManager.instance.myMoney += nowMoney;
                         nowMoney = 0;
-                        StartCoroutine(PlusMoney(1));
+                        StartCoroutine(PlusMoney(hotelCooltime));
                         isRestart = true;
                     }
                 }
@@ -96,33 +100,33 @@ public class AutoBuildingScript : MonoBehaviour
             case Building.buildingType.House:
                 if (nowMoney < 300)
                 {
-                    StartCoroutine(PlusMoney(1));
+                    StartCoroutine(PlusMoney(houseCooltime));
                 }
                 else if (nowMoney >= 300)
                 {
-                    StopCoroutine(PlusMoney(1));
+                    StopCoroutine(PlusMoney(houseCooltime));
                     isRestart = false;
                 }
                 break;
             case Building.buildingType.Building:
                 if (nowMoney < 500)
                 {
-                    StartCoroutine(PlusMoney(1));
+                    StartCoroutine(PlusMoney(buildingCooltime));
                 }
                 else if (nowMoney >= 500)
                 {
-                    StopCoroutine(PlusMoney(1));
+                    StopCoroutine(PlusMoney(buildingCooltime));
                     isRestart = false;
                 }
                 break;
             case Building.buildingType.Hotel:
                 if (nowMoney < 1000)
                 {
-                    StartCoroutine(PlusMoney(1));
+                    StartCoroutine(PlusMoney(hotelCooltime));
                 }
                 else if (nowMoney >= 1000)
                 {
-                    StopCoroutine(PlusMoney(1));
+                    StopCoroutine(PlusMoney(hotelCooltime));
                     isRestart = false;
                 }
                 break;

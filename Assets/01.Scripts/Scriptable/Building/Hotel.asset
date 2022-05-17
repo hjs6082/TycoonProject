@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hotel
   m_EditorClassIdentifier: 
   BuildingType: 2
-  plusMoney: 150
+  plusMoney: 200
