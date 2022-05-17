@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class Dogam : MonoBehaviour
 {
     [SerializeField]
+    private Text dogamCountText;
+    [SerializeField]
     private GameObject[] dogamPanels;
     public static Dogam instance;
     public Dictionary<int, bool> dogamDictionary = new Dictionary<int, bool>();
+
+    private int dogamCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,36 +43,27 @@ public class Dogam : MonoBehaviour
 
     public void DogamChange(int Number)
     {
-/*        foreach (var item in dogamDictionary)
+        if (dogamDictionary.ContainsKey(Number))
         {
-            if(item.Key == Number)
+            dogamDictionary.Remove(Number);
+            dogamDictionary.Add(Number, true);
+            foreach (var item in dogamDictionary)
             {
-                Debug.Log(item.Key);
-                if (dogamDictionary.ContainsKey(item.Key))
+                if(item.Value == true)
                 {
-                    dogamDictionary.Remove(item.Key);
-                    //dogamDictionary.Add(item.Key, true);
+                    dogamPanels[item.Key - 1].GetComponent<Image>().color = Color.blue;
                 }
             }
-        }*/
-/*        for (int i = 0; i < dogamDictionary.Count; i++)
-        {*/
-            if (dogamDictionary.ContainsKey(Number))
+        }
+        dogamCount = 0;
+        foreach (var item in dogamDictionary)
+        {
+            if (item.Value == true)
             {
-                //Debug.Log(item.Key);
-                //if (dogamDictionary.ContainsKey(item.Key))
-               // {
-                    dogamDictionary.Remove(Number);
-                    dogamDictionary.Add(Number, true);
-                    foreach (var item in dogamDictionary)
-                    {
-                        if(item.Value == true)
-                        {
-                            dogamPanels[item.Key - 1].GetComponent<Image>().color = Color.blue;
-                        }
-                    }
-              //  }
+                dogamCount++;
             }
-
+        }
+        dogamCountText.text = "8개 중 " + dogamCount + " 개의 캐릭터 발견";
     }
+
 }
